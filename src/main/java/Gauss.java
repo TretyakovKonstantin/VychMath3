@@ -54,7 +54,7 @@ public class Gauss {
         freeElements[max] = swap;
     }
 
-    public static double getDeterminant(double[][] matrix) {
+    private static double getDeterminant(double[][] matrix) {
         int n = matrix.length;
         double det = 0;
         if (n == 1)
@@ -79,6 +79,7 @@ public class Gauss {
         return det;
     }
 
+    @Deprecated
     public static double[] getDiscrepancy(double[][] oldMatrix, double[] answer) {
         double[][] matrix = new double[oldMatrix.length][];
         double[] freeElements = new double[oldMatrix.length];
